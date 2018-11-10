@@ -1,11 +1,20 @@
 package edu.unca.csci201;
 
 public class MultipleChoice implements Question {
+	
+	private String answer;
+	private String text;
+
+	public MultipleChoice(String text, String answer) {
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public String getTheQuestionText() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		//this.text = text;
+		
+		return text;
 	}
 
 	@Override
@@ -16,8 +25,8 @@ public class MultipleChoice implements Question {
 
 	@Override
 	public String getCorrectAnswer() {
-		// TODO Auto-generated method stub
-		return null;
+		//this.answer = answer;
+		return answer;
 	}
 
 }

@@ -12,9 +12,7 @@ public class MultipleChoice implements Question {
 
 	@Override
 	public String getTheQuestionText() {
-		
-		
-		
+			
 		return text;
 	}
 

@@ -11,7 +11,7 @@ public class QuizTime {
 		
 		
 		futurePast.addQuestion(eachQuestion);
-		//futurePast.giveQuiz();
+		futurePast.giveQuiz();
 		
 		
 

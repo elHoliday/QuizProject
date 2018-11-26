@@ -13,19 +13,19 @@ public class ShortAnswer implements Question{
 	@Override
 	public String getTheQuestionText() {
 		// TODO Auto-generated method stub
-		return null;
+		return text;
 	}
 
 	@Override
 	public boolean isCorrectAnswer(String answer) {
-		// TODO Auto-generated method stub
-		return false;
+		
+		return true;
 	}
 
 	@Override
 	public String getCorrectAnswer() {
 		// TODO Auto-generated method stub
-		return null;
+		return answer;
 	}
 
 }

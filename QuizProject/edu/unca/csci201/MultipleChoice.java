@@ -9,6 +9,11 @@ public class MultipleChoice implements Question {
 		this.text = text;
 		this.answer = answer;
 	}
+	
+	/*public String toString() {
+		
+		return text;
+	}*/
 
 	@Override
 	public String getTheQuestionText() {

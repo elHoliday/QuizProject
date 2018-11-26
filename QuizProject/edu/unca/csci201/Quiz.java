@@ -3,7 +3,7 @@ package edu.unca.csci201;
 import java.util.Scanner;
 
  class Quiz {
-	
+
 	private Question[] prompts;
 	
 	public Quiz() {
@@ -16,9 +16,9 @@ import java.util.Scanner;
 			+ "(a)Last Crusade\n(b)Temple of Doom\n(c)Raiders of the Lost Ark", "c");
 		prompts[2]= new MultipleChoice("In what city is Ferris Buleers Day Off Filmed?\n"
 				+"(a)Detroit\n(b)Chicago\n(c)Phillidelphia", "b");
-		prompts[3] = new MultipleChoice("What 80's film was the first to air music videos on MTV?"
-				+ "(a)Ghostbusters\n(b)Beverly Hills Cop/n(c)Flashdance", "c");
-		prompts[4] = new MultipleChoice("In 1987 the immortal words \'Hello, my name is Inigo Montoya. You killed my father. Prepare to die!\'were spoken in which film "
+		prompts[3] = new MultipleChoice("What 80's film was the first to air music videos on MTV?\n"
+				+ "(a)Ghostbusters\n(b)Beverly Hills Cop\n(c)Flashdance", "c");
+		prompts[4] = new MultipleChoice("In 1987 the immortal words \'Hello, my name is Inigo Montoya. You killed my father. Prepare to die!\'were spoken in which film?\n"
 				+ "(a)Princess Bride\n(b)Batman\n(c)The Color Purple", "a");
 		prompts[5] = new MultipleChoice("What artist sang the 1986 song “Danger Zone” from Top Gun?\n"
 				+ "(a)Boy George\n(b)Bruce Springsteen\n(c)Kenny Loggins", "c");
@@ -44,9 +44,9 @@ import java.util.Scanner;
 				,"Michael Keaton" );
 		prompts[16] = new ShortAnswer("In 1986 Whoopie Goldberg won the Golden Globe for best actress in this film directed by Steven Speilberg?"
 				,"The Color Purple" );
-		prompts[17] = new ShortAnswer("The quote, \'Where we\'re going we don\'t need roads.\' is a quote from which 1985 film?\n"
+		prompts[17] = new ShortAnswer("The quote, \'Where we\'re going we don\'t need roads.\' is a quote from which 1985 film?"
 				,"Back To The Future" );
-		prompts[18] = new ShortAnswer("What 1980's film was about, \'a brian, an athlete, a basket case and a crminal?\'"
+		prompts[18] = new ShortAnswer("What 1980's film was about, \'a brian, an athlete, a basket case and a crminal\'?"
 				,"The Breakfast Club" );
 		prompts[19] = new ShortAnswer("Back to the Future was originally called something else. What was this 1985 films original title?"
 				,"Spacemen From Pluto" );
@@ -57,25 +57,35 @@ import java.util.Scanner;
 	
 	public void addQuestion(Question q) {
 		
-
-				
+		Question newQuestion = null;	
 		
+		for (int i = 0; i < prompts.length; i++) {
+			
+			newQuestion = prompts[i];
+			System.out.println(newQuestion.getTheQuestionText()+"\n");			
+		}
+		//return q;		
 	}
 	
-	public double giveQuiz(Question[] q) {
+	
+	
+	public double giveQuiz() {
+		
 		double score=0;
 		
 		Scanner userInput = new Scanner(System.in);
-		//String answer = userInput.nextLine();
+		String answerAttempt = userInput.nextLine();
 		
-		for (int i =0; i < q.length; i++) {
-			System.out.println(q[i].getTheQuestionText());
-			String answerAttempt = userInput.nextLine();
-			if (answerAttempt.equals(q[i].getCorrectAnswer())){
+		for (int i =0; i < prompts.length; i++) {
+			Question newQuestion = prompts[i];
+			System.out.println(newQuestion);
+			//System.out.println();
+			answerAttempt = userInput.nextLine();
+			if (answerAttempt.equals(prompts[i].getCorrectAnswer())){
 				
 			score++;
 			}
-			System.out.println("You got " + score + " out of " + q.length + " possible" );
+			System.out.println("You got " + score + " out of " + prompts.length + " possible" );
 			
 		}
 		return score;
@@ -83,7 +93,7 @@ import java.util.Scanner;
 		
 	}	
 		
-		
+
 		
 	}
 	

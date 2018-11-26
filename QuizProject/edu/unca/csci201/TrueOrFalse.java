@@ -16,7 +16,7 @@ public class TrueOrFalse implements Question {
 	@Override
 	public String getTheQuestionText() {
 		// TODO Auto-generated method stub
-		return null;
+		return text;
 	}
 
 	@Override
@@ -28,7 +28,7 @@ public class TrueOrFalse implements Question {
 	@Override
 	public String getCorrectAnswer() {
 		// TODO Auto-generated method stub
-		return null;
+		return answer;
 	}
 
 }

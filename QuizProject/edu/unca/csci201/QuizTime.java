@@ -4,12 +4,13 @@ public class QuizTime {
 
 	public static void main(String[] args) {
 		
-		//String text;
-		//String Answer;
+		Question eachQuestion = null;
 		
 		Quiz futurePast = new Quiz();
+	
 		
-		//futurePast.addQuestion();
+		
+		futurePast.addQuestion(eachQuestion);
 		//futurePast.giveQuiz();
 		
 		

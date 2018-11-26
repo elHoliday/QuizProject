@@ -27,9 +27,29 @@ import java.util.Scanner;
 		prompts[7] = new TrueOrFalse("In nightmare on Elm Street Alice kills Freddy by setting him on fire?\n"
 				+"true or false","false", "She shows him his own reflection" );
 		prompts[8] = new TrueOrFalse("Yoda tells Obi One in Empire Strikes back that there will be another Jedi\n"
-				+"true or false","true", "it's Leia" );
-		prompts[7] = new TrueOrFalse("Back to the Future was originally called something else\n"
-				+"true or false", "true","Spacemen From Pluto" );
+				+"true or false","true", "it was Princess Leia" );
+		prompts[9] = new TrueOrFalse("Jennifer Beals used a body double for her stripper scenes in Flashdance?\n"
+				+"true or false","true", "Marine Jahan was the actress cast as the body double" );
+		prompts[10] = new TrueOrFalse("Jennifer Beals used a body double for her stripper scenes in Flashdance?\n"
+				+"true or false","true", "Marine Jahan was the actress cast as the body double" );
+		prompts[11] = new TrueOrFalse("Jennifer Beals used a body double for her stripper scenes in Flashdance?\n"
+				+"true or false","true", "Marine Jahan was the actress cast as the body double" );
+		prompts[12] = new TrueOrFalse("Jennifer Beals used a body double for her stripper scenes in Flashdance?\n"
+				+"true or false","true", "Marine Jahan was the actress cast as the body double" );
+		prompts[13] = new TrueOrFalse("Jennifer Beals used a body double for her stripper scenes in Flashdance?\n"
+				+"true or false","true", "Marine Jahan was the actress cast as the body double" );
+		prompts[14] = new ShortAnswer("These tiny creatures perform a weird celebration dance at the end of Return Of The Jedi. What are they called?"
+				,"Ewoks" );
+		prompts[15] = new ShortAnswer("Who played Batman in the 1989 film?"
+				,"Michael Keaton" );
+		prompts[16] = new ShortAnswer("In 1986 Whoopie Goldberg won the Golden Globe for best actress in this film directed by Steven Speilberg?"
+				,"The Color Purple" );
+		prompts[17] = new ShortAnswer("The quote, \'Where we\'re going we don\'t need roads.\' is a quote from which 1985 film?\n"
+				,"Back To The Future" );
+		prompts[18] = new ShortAnswer("What 1980's film was about, \'a brian, an athlete, a basket case and a crminal?\'"
+				,"The Breakfast Club" );
+		prompts[19] = new ShortAnswer("Back to the Future was originally called something else. What was this 1985 films original title?"
+				,"Spacemen From Pluto" );
 		
 				
 	}
@@ -50,8 +70,8 @@ import java.util.Scanner;
 		
 		for (int i =0; i < q.length; i++) {
 			System.out.println(q[i].getTheQuestionText());
-			String answer = userInput.nextLine();
-			if (answer.equals(q[i].getCorrectAnswer())){
+			String answerAttempt = userInput.nextLine();
+			if (answerAttempt.equals(q[i].getCorrectAnswer())){
 				
 			score++;
 			}
